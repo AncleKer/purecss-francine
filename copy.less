@@ -3,6 +3,16 @@
     @{property}: @value;
 }
 
+@blue: #1485a3;
+@dresscolor: @blue;
+
+.pseudoclear {
+    content: "";
+    display: block;
+    position: absolute;
+    filter: opacity(1);
+}
+
 html {
     min-width: 665px;
 }
@@ -13,9 +23,457 @@ div {
     box-sizing: border-box;
 }
 
+
 body {
     font-size: 1px;
     background-color: #281b11;
     background-image: linear-gradient(to bottom, #2c3521, #0b0e07);
     padding: 33px 5px 66px;
+
+    .paper {
+        position: relative;
+        margin: auto;
+        background-color: #242c1a;
+        background-image: radial-gradient(circle farthest-corner at 126% 36%, rgba(0,0,0,0) 65%, #000206 81%),radial-gradient(circle farthest-corner at 47% 50%, #5d818a 9%, #062931 76%);
+        box-shadow: 0 0 10px 8px #251e0b, 0 0 5px 20px #473c1c, 0 0 14px 34px #2e2613, 0 0 0 40px #261e0f;
+        overflow: hidden;
+        box-sizing: content-box;
+        width: 650px;
+
+        .container {
+            position: relative;
+            margin: auto;
+            width: 100%;
+            height: 1050px;
+            perspective: 400px;
+        }
+
+        .tree {
+            width: 100%;
+            height: 100%;
+        }
+
+        .square {
+            top: 8%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            height: 72%;
+
+            .hairdo {
+                top: 23.5%;
+                left: 26%;
+                width: 28%;
+                height: 30%;
+                transform: rotate(-9deg);
+            }
+
+            .sash {
+                border-radius: ~'0 0 49% 51% / 0 0 54% 74%';
+                width: 142%;
+                height: 17%;
+                left: -13%;
+                top: -26%;
+                transform: rotate(3deg);
+
+                .left {
+                    border-radius: ~'50% 50% 0 0 / 100% 100% 0 0';
+                    width: 11%;
+                    height: 57%;
+                    top: 3%;
+                    left: -4%;
+                    transform: rotate(-41deg);
+                    box-shadow: inset 0 22px 2px -3px darken(@dresscolor, 18%);
+                }
+
+                .right {
+                    border-radius: ~'50% 50% 0 0 / 100% 100% 0 0';
+                    width: 11%;
+                    height: 57%;
+                    top: 6%;
+                    right: -4%;
+                    transform: rotate(41deg);
+                    box-shadow: inset 0 22px 2px -3px darken(@dresscolor, 15%);
+                }
+            }
+
+            .body,
+            .hairdo {
+                .feather {
+                    &.feather1 {}
+
+                    &.feather2 {
+                        width: 74%;
+                        height: 35%;
+                        top: -61%;
+                        right: -33%;
+                        transform: rotate(45deg);
+                    }
+
+                    &:after {
+                        .pseudoclear;
+                        top: 32%;
+                        margin-top: -1px;
+                        height: 30%;
+                        box-shadow: inset -6px -8px 1px -6px #af7373, -5px 20px 31px -10px rgba(136,17,50,0.62);
+                        border-radius: 90%;
+                        width: 100%;
+                    }
+
+                    .featherside {
+                        border-radius: ~'0% 56% 0% 0 / 0% 100% 0% 0';
+                        height: 51%;
+                        width: 100%;
+
+                        &.left {
+                            bottom: 0;
+                            transform: scaleY(-1);
+                        }
+
+                        &.right {
+                            top: 0;
+
+                            .feath {
+                                &:nth-of-type(5n+3) {
+                                    transform: rotate(6deg);
+                                }
+
+                                &:nth-of-type(2n+7) {
+                                    transform: rotate(-2deg);
+                                }
+                            }
+                        }
+
+                        .feath {
+                            background: none;
+                            border-right-style: double;
+                            border-right-width: 7px;
+                            border-color: #ab636f;
+                            transform-origin: 100% 100%;
+                            max-width: 74%;
+                            bottom: 0;
+                            height: 106%;
+                            box-shadow: none;
+                            height: 100%;
+                            border-radius: inherit;
+                            opacity: 0.6;
+
+                            &:nth-of-type(odd) {
+                                border-color: #9a4c6b;
+                            }
+
+                            &.feath1 {
+                                right: 0;
+                                width: 53%;
+                            }
+
+                            &.feath2 {
+                                right: 2%;
+                                width: 85%;
+                            }
+
+                            &.feath3 {
+                                right: 4%;
+                                width: 53%;
+                            }
+
+                            &.feath4 {
+                                right: 6%;
+                                width: 86%;
+                            }
+
+                            &.feath5 {
+                                right: 8%;
+                                width: 58%;
+                            }
+
+                            &.feath6 {
+                                right: 10%;
+                                width: 63%;
+                            }
+
+                            &.feath7 {
+                                right: 12%;
+                                width: 56%;
+                            }
+
+                            &.feath8 {
+                                right: 14%;
+                                width: 84%;
+                            }
+
+                            &.feath9 {
+                                right: 16%;
+                                width: 56%;
+                            }
+
+                            &.feath10 {
+                                right: 18%;
+                                width: 68%;
+                            }
+
+                            &.feath11 {
+                                right: 20%;
+                                width: 53%;
+                            }
+
+                            &.feath12 {
+                                right: 22%;
+                                width: 83%;
+                            }
+
+                            &.feath13 {
+                                right: 24%;
+                                width: 54%;
+                            }
+
+                            &.feath14 {
+                                right: 26%;
+                                width: 66%;
+                            }
+
+                            &.feath15 {
+                                right: 28%;
+                                width: 58%;
+                            }
+
+                            &.feath16 {
+                                right: 30%;
+                                width: 120%;
+                            }
+
+                            &.feath17 {
+                                right: 32%;
+                                width: 52%;
+                            }
+
+                            &.feath18 {
+                                right: 34%;
+                                width: 64%;
+                            }
+
+                            &.feath19 {
+                                right: 36%;
+                                width: 56%;
+                            }
+
+                            &.feath20 {
+                                right: 37%;
+                                width: 88%;
+                            }
+
+                            &.feath21 {
+                                right: 40%;
+                                width: 58%;
+                            }
+
+                            &.feath22 {
+                                right: 42%;
+                                width: 52%;
+                            }
+
+                            &.feath23 {
+                                right: 44%;
+                                width: 54%;
+                            }
+
+                            &.feath24 {
+                                right: 46%;
+                                width: 54%;
+                            }
+
+                            &.feath25 {
+                                right: 48%;
+                                width: 45%;
+                                height: 80%;
+                            }
+
+                            &.feath26 {
+                                right: 50%;
+                                width: 28%;
+                                height: 79%;
+                            }
+
+                            &.feath27 {
+                                right: 52%;
+                                width: 24%;
+                                height: 73%;
+                            }
+
+                            &.feath28 {
+                                right: 54%;
+                                width: 38%;
+                                height: 86%;
+                            }
+
+                            &.feath29 {
+                                right: 56%;
+                                width: 44%;
+                                height: 85%;
+                            }
+
+                            &.feath30 {
+                                right: 58%;
+                                width: 34%;
+                                height: 84%;
+                            }
+
+                            &.feath31 {
+                                right: 60%;
+                                width: 34%;
+                                height: 83%;
+                            }
+
+                            &.feath32 {
+                                right: 62%;
+                                width: 32%;
+                                height: 82%;
+                            }
+
+                            &.feath33 {
+                                right: 64%;
+                                width: 38%;
+                                height: 81%;
+                            }
+
+                            &.feath34 {
+                                right: 66%;
+                                width: 28%;
+                                height: 80%;
+                            }
+
+                            &.feath35 {
+                                right: 68%;
+                                width: 26%;
+                                height: 79%;
+                            }
+
+                            &.feath36 {
+                                right: 70%;
+                                width: 27%;
+                                height: 78%;
+                            }
+
+                            &.feath37 {
+                                right: 72%;
+                                width: 30%;
+                                height: 75%;
+                            }
+
+                            &.feath38 {
+                                right: 74%;
+                                width: 33%;
+                                height: 70%;
+                            }
+
+                            &.feath39 {
+                                right: 76%;
+                                width: 37%;
+                                height: 65%;
+                            }
+
+                            &.feath40 {
+                                right: 78%;
+                                width: 27%;
+                                height: 60%;
+                            }
+
+                            &.feath41 {
+                                right: 80%;
+                                width: 39%;
+                                height: 55%;
+                            }
+
+                            &.feath42 {
+                                right: 82%;
+                                width: 37%;
+                                height: 50%;
+                            }
+
+                            &.feath43 {
+                                right: 84%;
+                                width: 26%;
+                                height: 45%;
+                            }
+
+                            &.feath44 {
+                                right: 86%;
+                                width: 35%;
+                                height: 40%;
+                            }
+
+                            &.feath45 {
+                                right: 88%;
+                                width: 36%;
+                                height: 35%;
+                            }
+
+                            &.feath46 {
+                                right: 90%;
+                                width: 21%;
+                                height: 25%;
+                            }
+
+                            &.feath47 {
+                                right: 92%;
+                                width: 26%;
+                                height: 20%;
+                            }
+
+                            &.feath48 {
+                                right: 94%;
+                                width: 20%;
+                                height: 15%;
+                            }
+
+                            &.feath49 {
+                                right: 96%;
+                                width: 17%;
+                                height: 10%;
+                            }
+
+                            &.feath50 {
+                                right: 98%;
+                                width: 14%;
+                                height: 5%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
